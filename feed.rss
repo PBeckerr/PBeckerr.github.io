@@ -1,11 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 	<channel>
 		<title>My Blog</title>
 		<link>http://host.com/</link>
 		<description>Welcome!</description>
 		<copyright>2020</copyright>
-		<pubDate>Tue, 28 Jan 2020 17:46:14 GMT</pubDate>
-		<lastBuildDate>Tue, 28 Jan 2020 17:46:14 GMT</lastBuildDate>
+		<pubDate>Tue, 28 Jan 2020 17:49:02 GMT</pubDate>
+		<lastBuildDate>Tue, 28 Jan 2020 17:49:02 GMT</lastBuildDate>
+		<item>
+			<title>Code and Extra</title>
+			<link>http://host.com/posts/code-and-extra</link>
+			<description>&lt;p&gt;Lorem ipsum dolor sit amet, &lt;code&gt;console.log('Look at me!');&lt;/code&gt;. Sed maximus augue in ullamcorper vehicula. Fusce dui ipsum, ornare ut enim non, laoreet efficitur tortor. Suspendisse eget gravida sem. Aliquam eget lacinia eros. Orci varius natoque penatibus et magnis &lt;code&gt;console.log("I'm a string.");&lt;/code&gt;, nascetur ridiculus mus.&lt;/p&gt;</description>
+			<guid>http://host.com/posts/code-and-extra</guid>
+			<pubDate>Wed, 04 Oct 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Lorem ipsum dolor sit amet, &lt;code&gt;console.log('Look at me!');&lt;/code&gt;. Sed maximus augue in ullamcorper vehicula. Fusce dui ipsum, ornare ut enim non, laoreet efficitur tortor. Suspendisse eget gravida sem. Aliquam eget lacinia eros. Orci varius natoque penatibus et magnis &lt;code&gt;console.log(&amp;quot;I'm a string.&amp;quot;);&lt;/code&gt;, nascetur ridiculus mus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Checklist&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="contains-task-list"&gt;
+&lt;li class="task-list-item"&gt;&lt;input disabled="disabled" type="checkbox" checked="checked" /&gt; This is a complete item&lt;/li&gt;
+&lt;li class="task-list-item"&gt;&lt;input disabled="disabled" type="checkbox" /&gt; This is an incomplete item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Four space indented code&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (isAwesome){
+    return true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Code fencing without styling&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (isAwesome){
+    return true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Code fencing with C# styling&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-cs"&gt;class DynamicPredicates : StudentClass
+{
+    static void Main(string[] args)
+    {
+        string[] ids = { &amp;quot;111&amp;quot;, &amp;quot;114&amp;quot;, &amp;quot;112&amp;quot; };
+
+        Console.WriteLine(&amp;quot;Press any key to exit.&amp;quot;);
+        Console.ReadKey();
+    }
+
+    static void QueryByID(string[] ids)
+    {
+        var queryNames =
+            from student in students
+            let i = student.ID.ToString()
+            where ids.Contains(i)
+            select new { student.LastName, student.ID };
+
+        foreach (var name in queryNames)
+        {
+            Console.WriteLine($&amp;quot;{name.LastName}: {name.ID}&amp;quot;);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Code fencing with JS styling&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-js"&gt;var paramsString = &amp;quot;q=URLUtils.searchParams&amp;amp;topic=api&amp;quot;
+var searchParams = new URLSearchParams(paramsString);
+
+//Iterate the search parameters.
+for (let p of searchParams) {
+    console.log(p);
+}
+
+searchParams.has(&amp;quot;topic&amp;quot;) === true; // true
+searchParams.get(&amp;quot;topic&amp;quot;) === &amp;quot;api&amp;quot;; // true
+searchParams.getAll(&amp;quot;topic&amp;quot;); // [&amp;quot;api&amp;quot;]
+searchParams.get(&amp;quot;foo&amp;quot;) === null; // true
+searchParams.append(&amp;quot;topic&amp;quot;, &amp;quot;webdev&amp;quot;);
+searchParams.toString(); // &amp;quot;q=URLUtils.searchParams&amp;amp;topic=api&amp;amp;topic=webdev&amp;quot;
+searchParams.set(&amp;quot;topic&amp;quot;, &amp;quot;More webdev&amp;quot;);
+searchParams.toString(); // &amp;quot;q=URLUtils.searchParams&amp;amp;topic=More+webdev&amp;quot;
+searchParams.delete(&amp;quot;topic&amp;quot;);
+searchParams.toString(); // &amp;quot;q=URLUtils.searchParams&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded>
+		</item>
 	</channel>
 </rss>
