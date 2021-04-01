@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-        <title>My Blog - About Me</title>
+        <title>My Blog - Code and Extra</title>
         <meta name="description" content="Welcome!" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 
@@ -28,9 +28,9 @@
         <meta name="msapplication-tooltip" content="My Blog" />
         <meta name="msapplication-starturl" content="/" />
 
-        <meta property="og:title" content="My Blog - About Me" />
+        <meta property="og:title" content="My Blog - Code and Extra" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://host.com/about" />
+        <meta property="og:url" content="http://host.com/posts/code-and-extra2" />
         <!-- TODO: More social graph meta tags -->
 
         
@@ -72,9 +72,17 @@
                         <div class="container">
                                 <div class="row">
                                         <div class="col-md-12">
-<div class="site-heading">
-    <h1>About Me</h1>
-</div>                                            </div>
+
+    
+<div class="post-heading">
+    <h1>Code and Extra</h1>
+    <div class="meta">        
+Published on 04 October 2017<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/ExampleTag" class="btn btn-default btn-xs">ExampleTag</a>
+        </div>     
+</div>
+                                        </div>
                                 </div>
                         </div>
                 </header>
@@ -83,7 +91,72 @@
                 <div class="container">
                         <div class="row">
                                 <div id="content" class="col-md-12">
-                                        <p>I'm awesome!</p>
+                                        
+
+<p>Lorem ipsum dolor sit amet, <code>console.log('Look at me!');</code>. Sed maximus augue in ullamcorper vehicula. Fusce dui ipsum, ornare ut enim non, laoreet efficitur tortor. Suspendisse eget gravida sem. Aliquam eget lacinia eros. Orci varius natoque penatibus et magnis <code>console.log(&quot;I'm a string.&quot;);</code>, nascetur ridiculus mus.</p>
+<p><strong>Checklist</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" checked="checked" /> This is a complete item</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> This is an incomplete item</li>
+</ul>
+<p><strong>Four space indented code</strong></p>
+<pre><code>if (isAwesome){
+    return true;
+}
+</code></pre>
+<p><strong>Code fencing without styling</strong></p>
+<pre><code>if (isAwesome){
+    return true;
+}
+</code></pre>
+<p><strong>Code fencing with C# styling</strong></p>
+<pre><code class="language-cs">class DynamicPredicates : StudentClass
+{
+    static void Main(string[] args)
+    {
+        string[] ids = { &quot;111&quot;, &quot;114&quot;, &quot;112&quot; };
+
+        Console.WriteLine(&quot;Press any key to exit.&quot;);
+        Console.ReadKey();
+    }
+
+    static void QueryByID(string[] ids)
+    {
+        var queryNames =
+            from student in students
+            let i = student.ID.ToString()
+            where ids.Contains(i)
+            select new { student.LastName, student.ID };
+
+        foreach (var name in queryNames)
+        {
+            Console.WriteLine($&quot;{name.LastName}: {name.ID}&quot;);
+        }
+    }
+}
+</code></pre>
+<p><strong>Code fencing with JS styling</strong></p>
+<pre><code class="language-js">var paramsString = &quot;q=URLUtils.searchParams&amp;topic=api&quot;
+var searchParams = new URLSearchParams(paramsString);
+
+//Iterate the search parameters.
+for (let p of searchParams) {
+    console.log(p);
+}
+
+searchParams.has(&quot;topic&quot;) === true; // true
+searchParams.get(&quot;topic&quot;) === &quot;api&quot;; // true
+searchParams.getAll(&quot;topic&quot;); // [&quot;api&quot;]
+searchParams.get(&quot;foo&quot;) === null; // true
+searchParams.append(&quot;topic&quot;, &quot;webdev&quot;);
+searchParams.toString(); // &quot;q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev&quot;
+searchParams.set(&quot;topic&quot;, &quot;More webdev&quot;);
+searchParams.toString(); // &quot;q=URLUtils.searchParams&amp;topic=More+webdev&quot;
+searchParams.delete(&quot;topic&quot;);
+searchParams.toString(); // &quot;q=URLUtils.searchParams&quot;
+</code></pre>
+
+
 
                                 </div>
                         </div>
